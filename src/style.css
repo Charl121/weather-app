@@ -1,0 +1,132 @@
+body {
+  display: block;
+  font-family: poppins, sans-serif;
+  margin: 0 auto;
+  color: white;
+}
+.container {
+  padding: 20px;
+  border: solid;
+  border-radius: 10px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+header {
+  padding-left: 150px;
+}
+
+h1,
+h3,
+#current-temperature {
+  text-align: center;
+}
+#current-city {
+  font-size: 80px;
+  text-transform: capitalize;
+}
+#current-weather {
+  margin: 0 auto;
+  padding-top:20px;
+  font-size: 55px;
+}
+
+
+#current-city-button {
+  margin: 25px 0;
+  padding: 7px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #f8c96c;
+  border: solid 0.5px;
+}
+
+#current-city-button:hover {
+  color: #f8c96c;
+  background-color: #ffffff;
+}
+
+#current-temp{
+  padding-top: 20px;
+  font-size: 50px;
+}
+
+#detailed-weather{
+  list-style-type: none;
+  padding-top: 20px;
+}
+
+.weather-illustration{
+padding-top: 5px;
+}
+
+
+main {
+  font-size: 25px;
+}
+
+.time-forecast {
+  margin-left: 33px;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.five-day-forecast {
+  list-style: none;
+  margin: 0 auto;
+}
+
+.day,
+.weather-forecast {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.input-group,
+.mb-3 {
+  margin: 0 auto;
+  width: 400px;
+}
+
+footer {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.linkedin,
+.fa-linkedin-in {
+  background-color: #0077b5;
+  color: white;
+  transition: all;
+}
+.fa-linkedin-in,
+.fa-instagram {
+  padding: 10px;
+  margin: 0;
+}
+.linkedin,
+.instagram {
+  padding: 1px;
+}
+.instagram,
+.fa-instagram {
+  background-color: white;
+  color: #adafa3;
+  transition: all;
+}
+.linkedin:hover,
+.fa-linkedin-in:hover {
+  background: white;
+  color: #0077b5;
+  cursor: pointer;
+  border: none #0077b5;
+}
+.instagram:hover,
+.fa-instagram:hover {
+  background: #adafa3;
+  color: white;
+  cursor: pointer;
+  border: none white;
+}
