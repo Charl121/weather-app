@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Weather App</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/40078870a9.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="row" id="current-temperature">
+        <div class="col-5">
+          <div class="header">
+            <h1 id="current-city">
+              <strong> Tokyo </strong>
+            </h1>
+            <div class="row">
+              <div class="col-5">
+                <h1 id="current-temp">
+                  <strong> 28</strong>°C
+                </h1>
+              </div>
+              <div class="col-7">
+                <ul id="detailed-weather">
+                  <li class=humidity> Humidity: 20% </li>
+                  <li class=wind> Wind: 1m/s </li>
+                  <li class=description> Partly Cloudy </li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 id="current-time">
+              day 19:25
+              <h3>
+          </div>
+
+          <form class="change-city-form" id="search-bar">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Type a city..." aria-label="Change City"
+                aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+              </div>
+            </div>
+        </div>
+        </form>
+
+        <div class="col-6" f>
+          <img class="weather-illustration" src="src/undraw_sunny_day_bk3m.svg" width=300>
+          <div>
+            <button class="currentLocationButton" type="click" id="current-city-button">Current Location</button>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+      <hr />
+      <div class="time-forecast row">
+        <div class="col-2">
+          <div class="time row">
+            01:00
+          </div>
+          <div class="time-temperature row">
+            22°c
+          </div>
+          <div class="time-precipitation row">
+            0%
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="time row">
+            05:00
+          </div>
+          <div class="time-temperature row">
+            24°c
+          </div>
+          <div class="time-percipitation row">
+            0%
+          </div>
+        </div>
+        <div class="col">
+          <div class="time row">
+            09:00
+          </div>
+          <div class="current-temperature row">
+            26°c
+          </div>
+          <div class="time-percipitation row">
+            0%
+          </div>
+        </div>
+        <div class="col">
+          <div class="time row">
+            13:00
+          </div>
+          <div class="current-temperature row">
+            28°c
+          </div>
+          <div class="time-percipitation row">
+            0%
+          </div>
+        </div>
+        <div class="col">
+          <div class="time row">
+            17:00
+          </div>
+          <div class="time-temperature row">
+            28°c
+          </div>
+          <div class="time-percipitation row">
+            0%
+          </div>
+        </div>
+        <div class="col">
+          <div class="time row">
+            21:00
+          </div>
+          <div class="time-temperature row">
+            26°c
+          </div>
+          <div class="time-percipitation row">
+            0%
+          </div>
+        </div>
+
+      </div>
+      <hr />
+
+
+
+      <ul class="five-day-forecast">
+        <li>
+          <div class="row">
+            <div class="day col">
+              Tomorrow
+            </div>
+            <div class="weather-forecast col">
+              <p>
+                <strong>
+                  <i class="far fa-sun"></i> 24°c
+                </strong>
+              </p>
+            </div>
+        </li>
+        <li>
+          <div class="row">
+            <div class="day col">
+              Thursday
+            </div>
+            <div class="weather-forecast col">
+              <p>
+                <strong>
+                  <i class="far fa-sun"></i> 25°c
+                </strong>
+              </p>
+            </div>
+        </li>
+        <li>
+          <div class="row">
+            <div class="day col-6">
+              Friday
+            </div>
+            <div class="weather-forecast col-6">
+              <p>
+                <strong>
+                  <i class="fas fa-cloud"></i> 22°c
+                </strong>
+              </p>
+            </div>
+        </li>
+        <li>
+          <div class="row">
+            <div class="day col-6">
+              Saturday
+            </div>
+            <div class="weather-forecast col-6">
+              <p>
+                <strong>
+                  <i class="fas fa-cloud-sun"></i> 23°c
+                </strong>
+              </p>
+            </div>
+        </li>
+        <li>
+          <div class="row">
+            <div class="day col">
+              Sunday
+            </div>
+            <div class="weather-forecast col">
+              <p>
+                <strong>
+                  <i class="fas fa-cloud-showers-heavy"></i> 22°c
+                </strong>
+              </p>
+            </div>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <p>
+        Coded by Charlotte Williams
+      </p>
+      <button type="button" class="btn linkedin btn-light"><i class="fab fa-linkedin-in"></i></button>
+      <button type="button" class="btn instagram btn-light"><i class="fab fa-instagram"></i></button>
+
+    </footer>
+  </div>
+  </div>
+  <script src="src/script.js"></script>
+</body>
+
+</html>
