@@ -5,6 +5,7 @@ body {
   color: white;
 }
 .container {
+  display: block;
   padding: 20px;
   border: solid;
   border-radius: 10px;
@@ -95,6 +96,16 @@ footer {
   margin: 0 auto;
   text-align: center;
 }
+.open-source-link{
+  text-decoration: underline;
+  color: #6C63FF;
+}
+
+.open-source-link:hover{
+  color:#ffffff;
+  
+}
+
 .linkedin,
 .fa-linkedin-in {
   background-color: #0077b5;
