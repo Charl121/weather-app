@@ -36,7 +36,8 @@ function displayCityWeather(response) {
  
 function displayHourlyForecast (response) {
   console.log (response);
-}
+    let timetemperature = document.querySelector("#time-temperature-0").innerHTML =`${Math.round(response.data.list[0].main.temp)}°C` ;
+      }
 
 function searchCity(event) {
   event.preventDefault();
