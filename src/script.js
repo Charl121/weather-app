@@ -36,7 +36,12 @@ function displayCityWeather(response) {
  
 function displayHourlyForecast (response) {
   console.log (response);
-    let timetemperature = document.querySelector("#time-temperature-0").innerHTML =`${Math.round(response.data.list[0].main.temp)}°C` ;
+    let timetemperature0 = document.querySelector("#time-temperature-0").innerHTML =`${Math.round(response.data.list[0].main.temp)}°C` ;
+    let timetemperature1 = document.querySelector("#time-temperature-1").innerHTML =`${Math.round(response.data.list[1].main.temp)}°C` ;
+    let timetemperature2 = document.querySelector("#time-temperature-2").innerHTML =`${Math.round(response.data.list[2].main.temp)}°C` ;
+    let timetemperature3 = document.querySelector("#time-temperature-3").innerHTML =`${Math.round(response.data.list[3].main.temp)}°C` ;
+    let timetemperature4 = document.querySelector("#time-temperature-4").innerHTML =`${Math.round(response.data.list[4].main.temp)}°C` ;
+    let timetemperature5 = document.querySelector("#time-temperature-5").innerHTML =`${Math.round(response.data.list[5].main.temp)}°C` ;
       }
 
 function searchCity(event) {
