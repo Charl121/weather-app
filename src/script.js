@@ -34,6 +34,9 @@ function displayCityWeather(response) {
 
 }
  
+function displayHourlyForecast (response) {
+  console.log (response);
+}
 
 function searchCity(event) {
   event.preventDefault();
@@ -41,6 +44,9 @@ function searchCity(event) {
   let key = "51788e8922b028b9bd5474e029ff8729";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
   axios.get(url).then(displayCityWeather);
+
+  let url2 = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&units=metric`;
+  axios.get(url2).then(displayHourlyForecast);
 }
 
 function searchLocation (position) {
