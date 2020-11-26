@@ -13,6 +13,7 @@ function showTime(day, time) {
   let now = new Date();
 
   let currentDay = days[now.getDay()];
+
   let currentHour = now.getHours();
   if (currentHour < 10) {
     currentHour = `0${currentHour}`;
@@ -24,6 +25,8 @@ function showTime(day, time) {
   let showTime = `${currentDay}  ${currentHour}: ${currentMin}`;
   return showTime;
 }
+
+
 
 function displayCityWeather(response) {
   document.querySelector("#current-city").innerHTML= response.data.name;
@@ -42,7 +45,11 @@ function displayHourlyForecast (response) {
     let timetemperature3 = document.querySelector("#time-temperature-3").innerHTML =`${Math.round(response.data.list[3].main.temp)}°C` ;
     let timetemperature4 = document.querySelector("#time-temperature-4").innerHTML =`${Math.round(response.data.list[4].main.temp)}°C` ;
     let timetemperature5 = document.querySelector("#time-temperature-5").innerHTML =`${Math.round(response.data.list[5].main.temp)}°C` ;
+      
+   
+    let time0 = document.querySelector ("#time-0").innerHTML =`${response.data.list[0].dt}`;
       }
+
 
 function searchCity(event) {
   event.preventDefault();
@@ -72,6 +79,7 @@ function showCurrentLocation (event){
 
 let h3 = document.querySelector("#current-time");
 h3.innerHTML = showTime();
+
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", searchCity);
