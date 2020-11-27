@@ -26,7 +26,15 @@ function showTime(day, time) {
   return showTime;
 }
 
-
+function formatHours (timestamp) {
+  new Date();
+  let now = new Date(timestamp);
+  let currentHour = now.getHours();
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
+  }
+  return `${currentHour}:00`;
+  }
 
 function displayCityWeather(response) {
   document.querySelector("#current-city").innerHTML= response.data.name;
@@ -47,7 +55,12 @@ function displayHourlyForecast (response) {
     let timetemperature5 = document.querySelector("#time-temperature-5").innerHTML =`${Math.round(response.data.list[5].main.temp)}°C` ;
       
    
-    let time0 = document.querySelector ("#time-0").innerHTML =`${response.data.list[0].dt}`;
+    let time0 = document.querySelector ("#time-0").innerHTML =`${formatHours(response.data.list[0].dt)}`;
+    let time1 = document.querySelector ("#time-1").innerHTML =`${formatHours(response.data.list[1].dt)}`;
+    let time2 = document.querySelector ("#time-2").innerHTML =`${formatHours(response.data.list[2].dt)}`;
+    let time3 = document.querySelector ("#time-3").innerHTML =`${formatHours(response.data.list[3].dt)}`;
+    let time4 = document.querySelector ("#time-4").innerHTML =`${formatHours(response.data.list[4].dt)}`;
+    let time5 = document.querySelector ("#time-5").innerHTML =`${formatHours(response.data.list[5].dt)}`;
       }
 
 
