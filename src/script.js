@@ -1,4 +1,4 @@
-function showTime(day, time) {
+function showTime(day, timestamp) {
   let days = [
     "Sunday",
     "Monday",
@@ -90,9 +90,9 @@ function showCurrentLocation (event){
   navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
+  
 let h3 = document.querySelector("#current-time");
 h3.innerHTML = showTime();
-
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", searchCity);
