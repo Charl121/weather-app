@@ -90,7 +90,20 @@ function showCurrentLocation (event){
   navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
+function changeIllustration (){
+  let temperature = document.querySelector("#current-temp").innerHTML;
+  let image = document.querySelector("#weather-picture").innerHTML;
+
+  if (temperature <=10) {
+   image = "src/undraw_Lighthouse_frb8.svg";
+  } else {
+  image = "src/undraw_sunny_day_bk3m.svg";
+  }
   
+}
+  let weatherIllustration = document.querySelector("#weather-picture");
+  weatherIllustration.innerHTML= changeIllustration();
+
 let h3 = document.querySelector("#current-time");
 h3.innerHTML = showTime();
 
