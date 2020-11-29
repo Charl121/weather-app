@@ -99,10 +99,10 @@ function changeIllustration (){
   } else {
   image = "src/undraw_sunny_day_bk3m.svg";
   }
-  
-}
-  let weatherIllustration = document.querySelector("#weather-picture");
-  weatherIllustration.innerHTML= changeIllustration();
+  }
+
+let weatherIllustration = document.querySelector("#weather-picture");
+weatherIllustration.innerHTML= changeIllustration();
 
 let h3 = document.querySelector("#current-time");
 h3.innerHTML = showTime();
